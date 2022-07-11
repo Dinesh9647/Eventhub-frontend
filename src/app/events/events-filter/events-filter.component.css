@@ -1,0 +1,41 @@
+.sidemenu {
+    margin-top: 35px;
+    height: 100%;
+    width: 200px;
+}
+.slidebtn {
+    width: 99%;
+    height: 40px;
+    margin-top: 30px;
+    border: none;
+    background: #9acaee4f;
+    margin-bottom: 3px;
+}
+.spacr {
+    padding-right: 5px;
+}
+.ovflow {
+    height: 210px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid grey;
+    overflow-y: scroll;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}

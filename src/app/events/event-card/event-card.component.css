@@ -1,0 +1,16 @@
+.card-body {
+    background-color: #9b969629;
+}
+.btn {
+    position: absolute;
+    bottom: 15px;
+}
+.card-text {
+    height: 35%;
+}
+.tsmall {
+    font-size: 15px;
+}
+.subweight {
+    font-weight: 600;
+}

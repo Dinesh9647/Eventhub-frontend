@@ -1,0 +1,66 @@
+<div class="position-fixed sidemenu">
+  <div>
+    <div class="border-bottom">
+      <h5>Apply Filters</h5>
+    </div>
+    <div class="w-100 spacr">
+        <button class="slidebtn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+            Category
+        </button>
+        <div class="collapse" id="collapse1">
+            <div class="btn-group btn-group-toggle" data-toggle="buttons" *ngFor="let category of categories">
+              <label class="btn btn-outline-info" >
+                <input 
+                  type="radio" 
+                  name="options1" 
+                  id="{{category}}" 
+                  value="{{category}}"
+                  (click)="addCategory($event)" 
+                  autocomplete="off"
+                  [checked]="category === activeCategory"
+                >&nbsp;{{category}}
+              </label>
+            </div>
+        </div>
+    </div>
+    <div class="w-100 spacr">
+      <button class="slidebtn mt-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+          Status
+      </button>
+      <div class="collapse" id="collapse2">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons" *ngFor="let status of allStatus">
+          <label class="btn btn-outline-info" >
+            <input 
+              type="radio" 
+              name="options2" 
+              id="{{status}}" 
+              value="{{status}}"
+              (click)="addStatus($event)" 
+              autocomplete="off"
+              [checked]="status === activeStatus"
+            >&nbsp;{{status}}
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="w-100 spacr">
+      <button class="slidebtn mt-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse2">
+          Tags
+      </button>
+      <div class="collapse ovflow" id="collapse3">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons" *ngFor="let tag of tags">
+          <label class="btn btn-outline-info" >
+            <input 
+              type="checkbox" 
+              name="options3" 
+              id="{{tag.id}}" 
+              value="{{tag.id}}"
+              (click)="addTags($event)"
+              [checked]="checkedTags.has(tag.id)"
+            >&nbsp;{{tag.phrase}}
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

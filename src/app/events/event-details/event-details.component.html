@@ -1,0 +1,38 @@
+<div class="container"> 
+    <div class="row"> 
+        <div class="col-md-5"> 
+            <div class="project-info-box mt-0"> 
+                <h5>{{event.title}}</h5> 
+                <p class="mb-0">{{event.description}}</p> 
+            </div>
+            <!-- / project-info-box --> 
+            <div class="project-info-box"> 
+                <p><b>Register before:</b> {{event.reg_end | date:'h:mm a, MMM d, y'}}</p> 
+                <p><b>Venue:</b> {{event.venue}}</p> 
+                <p *ngIf="event.fees === 0"><b>Entry Fee:</b> Free</p> 
+                <p *ngIf="event.fees !== 0"><b>Entry Fee:</b> {{event.fees}}</p>
+            </div>
+            <!-- / project-info-box --> 
+            <div class="project-info-box mt-0 mb-0"> 
+                <button *ngIf="!registeredEvent" type="button" class="btn btn-primary" (click)="registerEvent()">
+                    Register Now
+                </button>
+                <button *ngIf="registeredEvent" type="button" class="btn btn-success disabled" (click)="registerEvent()">
+                    Already Registered
+                </button>
+            </div>
+            <!-- / project-info-box --> 
+        </div><!-- / column --> 
+        <div class="col-md-7"> 
+            <img src="{{event.url}}" alt="{{event.title}}" class="rounded"> 
+            <div class="project-info-box"> 
+                <p><b>Category:</b> {{event.category}}</p> 
+                <p><b>Tags: </b>
+                    <span *ngFor="let tag of tags"> {{tag.phrase}},</span>
+                </p> 
+            </div>
+            <!-- / project-info-box --> 
+        </div>
+        <!-- / column --> 
+    </div> 
+</div>

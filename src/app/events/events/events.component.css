@@ -1,0 +1,19 @@
+.bordcol {
+    border-right: 2px solid #e3d8d875;
+    padding: 0;
+    width: 200px;
+    margin-left: 5px;
+}
+.pald {
+    padding-left: 60px;
+}
+.pagin {
+    height: 200px;
+}
+.rfullh {
+    height: 100vh;
+}
+.notfound {
+    height: 50%;
+    
+}

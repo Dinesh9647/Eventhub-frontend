@@ -1,0 +1,24 @@
+<div class="row bg rfullh">
+    <div class="bordcol col-2 d-flex flex-column">
+      <app-events-filter></app-events-filter>
+    </div>
+    <div class="col pald">
+      <div class="row">
+        <div class="mt-5 text-primary">
+          <h1>EVENTS & NEWS</h1>
+          <h4>Learn, Compete & Grow</h4>
+        </div>
+        <ng-container *ngFor="let event of events | paginate: { itemsPerPage: 3, currentPage: p }">
+          <div class="col mt-2">
+            <app-event-card [eventTags]="event"></app-event-card>
+          </div>
+        </ng-container>
+      </div>
+      <div *ngIf="events.length !== 0" class="d-flex justify-content-center align-items-center pagin">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </div>
+      <h1 *ngIf="events.length === 0" class="d-flex justify-content-center align-items-center notfound">
+        No Events Found
+      </h1>
+    </div>
+  </div>

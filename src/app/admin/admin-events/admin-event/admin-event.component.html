@@ -1,0 +1,37 @@
+<section class="vh-100" style="background-color: #eee;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-12 col-xl-10">
+          <div class="card">
+            <div class="card-header p-3">
+              <h5 class="mb-0">User List</h5>
+            </div>
+            <div class="card-body overflow-auto" data-mdb-perfect-scrollbar="true" style="position: relative; height: 400px">
+              <table class="table mb-0">
+                <thead>
+                  <tr>
+                    <th scope="col">Username</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Role</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="fw-normal" *ngFor="let user of participants">
+                    <th>
+                      <span class="ms-2">{{user.username}}</span>
+                    </th>
+                    <td class="align-middle">
+                      <span>{{user.email}}</span>
+                    </td>
+                    <td class="align-middle">
+                      <h6 class="mb-0"><span class="badge bg-danger">{{user.role}}</span></h6>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

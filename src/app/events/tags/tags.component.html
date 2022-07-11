@@ -1,0 +1,20 @@
+<div class="col-md-12">
+    <div class="card card-container">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons" *ngFor="let tag of tags">
+            <label class="btn btn-outline-secondary" >
+              <input 
+                type="checkbox" 
+                name="options3" 
+                id="{{tag.id}}" 
+                value="{{tag.id}}"
+                (click)="addTag($event)"
+              >&nbsp;{{tag.phrase}}
+            </label>
+        </div>
+        <div class="d-flex justify-content-center mt-4">
+            <button class="btn btn-primary btn-block" (click)="addTagstoEvent()">
+              Add Tags
+            </button>
+          </div>
+    </div>
+</div>
