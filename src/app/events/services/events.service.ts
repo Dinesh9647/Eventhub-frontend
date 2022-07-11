@@ -3,9 +3,9 @@ import { environment } from 'src/environments/environment';
 import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json; charset=utf-8; multipart/form-data' })
-};
+// const httpOptions = {
+//   headers: new HttpHeaders({ 'Content-Type': 'application/json; charset=utf-8; multipart/form-data' })
+// };
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +16,7 @@ export class EventsService {
   constructor(private http: HttpClient) { }
 
   createEvent(params: any): Observable<any> {
-    return this.http.post(this.apiUrl + '/events', params, httpOptions)
+    return this.http.post(this.apiUrl + '/events', params)
   }
 
   getEvents(params: any): Observable<any> {

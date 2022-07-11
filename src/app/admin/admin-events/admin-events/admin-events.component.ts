@@ -17,7 +17,7 @@ export class AdminEventsComponent implements OnInit {
     .subscribe(
       res => {
         this.events = res.events
-        console.log(this.events)
+        // console.log(this.events)
       },
       err => {
         console.log(err)
