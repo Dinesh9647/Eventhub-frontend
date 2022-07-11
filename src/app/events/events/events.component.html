@@ -14,10 +14,10 @@
           </div>
         </ng-container>
       </div>
-      <div *ngIf="events.length !== 0" class="d-flex justify-content-center align-items-center pagin">
+      <div *ngIf="!isEmpty" class="d-flex justify-content-center align-items-center pagin">
         <pagination-controls (pageChange)="p = $event"></pagination-controls>
       </div>
-      <h1 *ngIf="events.length === 0" class="d-flex justify-content-center align-items-center notfound">
+      <h1 *ngIf="isEmpty" class="d-flex justify-content-center align-items-center notfound">
         No Events Found
       </h1>
     </div>

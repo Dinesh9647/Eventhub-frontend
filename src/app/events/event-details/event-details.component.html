@@ -10,7 +10,7 @@
                 <p><b>Register before:</b> {{event.reg_end | date:'h:mm a, MMM d, y'}}</p> 
                 <p><b>Venue:</b> {{event.venue}}</p> 
                 <p *ngIf="event.fees === 0"><b>Entry Fee:</b> Free</p> 
-                <p *ngIf="event.fees !== 0"><b>Entry Fee:</b> {{event.fees}}</p>
+                <p *ngIf="event.fees !== 0"><b>Entry Fee:</b> ₹{{event.fees}}</p>
             </div>
             <!-- / project-info-box --> 
             <div class="project-info-box mt-0 mb-0"> 

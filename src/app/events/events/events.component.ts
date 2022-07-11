@@ -13,6 +13,7 @@ export class EventsComponent implements OnInit {
   errorMessage = ''
   p: number = 1
   qParams: any = {}
+  isEmpty: Boolean = false
 
   constructor(
     private eventService: EventsService, 
@@ -23,6 +24,7 @@ export class EventsComponent implements OnInit {
       .subscribe(
         res => {
           this.events = res.events
+          this.isEmpty = (this.events.length === 0)
           // console.log(res.events)
         },
         err => {
